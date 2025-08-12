@@ -23,10 +23,10 @@
                                 <RowDefinition Height="2"/>
                             </Grid.RowDefinitions>
                             <Grid>
-                                <Label Text="Veg Pizza" TextColor="#495F6E" VerticalTextAlignment="Center" Margin="10,0,0,0"/>
+                                <Label Text="Veg Pizza" VerticalTextAlignment="Center" Margin="10,0,0,0"/>
                                 <Image Margin="10" HorizontalOptions="End" HeightRequest="15" WidthRequest="15" Source="{Binding IsExpanded,Source={x:Reference expander1},Converter={StaticResource ExpanderIconConverter}}"/>
                             </Grid>
-                            <BoxView Grid.Row="1" IsVisible="{Binding Path=IsExpanded, Source={x:Reference expander1}, Converter={StaticResource SeperatorVisibilityConverter}, ConverterParameter='Header'}" BackgroundColor="Green"/>
+                            <BoxView Grid.Row="1" IsVisible="{Binding Path=IsExpanded, Source={x:Reference expander1}, Converter={StaticResource SeperatorVisibilityConverter}, ConverterParameter='Header'}" BackgroundColor="#1565c0"/>
                         </Grid>
                     </syncfusion:SfExpander.Header>
                     <syncfusion:SfExpander.Content>
@@ -36,7 +36,7 @@
                                 <RowDefinition Height="2"/>
                             </Grid.RowDefinitions>
                             <Label BackgroundColor="#FFFFFF" HeightRequest="50" Text="Veg pizza is prepared with the items that meet vegetarian standards by not including any meat or animal tissue products." TextColor="#303030" Margin="10,10,10,10" VerticalTextAlignment="Center"/>
-                            <BoxView Grid.Row="1" IsVisible="{Binding Path=IsExpanded, Source={x:Reference expander1}, Converter={StaticResource SeperatorVisibilityConverter}, ConverterParameter='Content'}" BackgroundColor="Green"/>
+                            <BoxView Grid.Row="1" IsVisible="{Binding Path=IsExpanded, Source={x:Reference expander1}, Converter={StaticResource SeperatorVisibilityConverter}, ConverterParameter='Content'}" BackgroundColor="#1565c0"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                 </syncfusion:SfExpander>
@@ -49,7 +49,7 @@
                                 <RowDefinition Height="2"/>
                             </Grid.RowDefinitions>
                             <Grid HeightRequest="50">
-                                <Label Text="Non-veg Pizza" TextColor="#495F6E" VerticalTextAlignment="Center" Margin="10,0,0,0"/>
+                                <Label Text="Non-veg Pizza" VerticalTextAlignment="Center" Margin="10,0,0,0"/>
                                 <Image Margin="10" HorizontalOptions="End" HeightRequest="15" WidthRequest="15" Source="{Binding IsExpanded,Source={x:Reference expander2},Converter={StaticResource ExpanderIconConverter}}"/>
                             </Grid>
                             <BoxView Grid.Row="1" IsVisible="{Binding Path=IsExpanded, Source={x:Reference expander2}, Converter={StaticResource SeperatorVisibilityConverter}, ConverterParameter='Header'}" BackgroundColor="Green"/>
