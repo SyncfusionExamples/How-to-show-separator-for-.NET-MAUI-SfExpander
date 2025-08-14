@@ -1,12 +1,5 @@
-# How to show separator for .NET MAUI SfExpander?
-This article demonstrates how to show separator for [.NET MAUI SfExpander](https://www.syncfusion.com/maui-controls/maui-expander). This example shows how to add a separator for [SfExpander.Header](https://help.syncfusion.com/cr/maui/Syncfusion.maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_Header) and [SfExpander.Content](https://help.syncfusion.com/cr/maui/Syncfusion.maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_Content) by using BoxView in [SfExpander](https://www.syncfusion.com/maui-controls/maui-expander).
-
-**XAML:**
-
-BoxView added in Header and Content with Height as 2. Converter bound to the IsVisible property to change the visibility of the separator line and the ConverterParameter defined by Header and Content.
-
- ```xml
-   <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Expander;assembly=Syncfusion.Maui.Expander"
              xmlns:local="clr-namespace:SfExpander_Sample.Helper"
@@ -78,32 +71,3 @@ BoxView added in Header and Content with Height as 2. Converter bound to the IsV
     </ContentPage.Content>
 
 </ContentPage>
- ```
-
-**C#**
-
-Converter used to show or hide the separator line based on the [IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_IsExpanded) property.
-
- ```c#
-    public class ExpanderIconConverter : IValueConverter
-{
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-    {
-        if ((bool)value)
-        {
-            return ImageSource.FromFile("arrow_down.png");
-        }
-        else
-        {
-            return ImageSource.FromFile("arrow_up.png");
-        }
-    }
-
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-    {
-        throw new NotImplementedException();
-    }
-}
- ```
-
-Download the complete sample from [GitHub](https://github.com/SyncfusionExamples/How-to-show-separator-for-.NET-MAUI-SfExpander)
